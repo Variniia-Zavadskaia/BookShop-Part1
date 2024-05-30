@@ -11,38 +11,50 @@
 <body>
     <h1>Book Shop</h1>
 
-    <ul>
-        <li>
-            <span class="title">Title</span>
-            <span class="price">Price</span>
-            <button class="read">Read</button>
-            <button class="update">Update</button>
-            <button class="delete">Delete</button>
-        </li>
-        <li>
-            <span class="title">Lord of the Rings</span>
-            <span class="price">220</span>
-            <button class="read">Read</button>
-            <button class="update">Update</button>
-            <button class="delete">Delete</button>
-        </li>
-        <li>
-            <span class="title">Martin Eden</span>
-            <span class="price">150</span>
-            <button class="read">Read</button>
-            <button class="update">Update</button>
-            <button class="delete">Delete</button>
-        </li>
-        <li>
-            <span class="title">The Shining</span>
-            <span class="price">75</span>
-            <button class="read">Read</button>
-            <button class="update">Update</button>
-            <button class="delete">Delete</button>
-        </li>
-    </ul>
-    <script src="js/service/book.service.js"></script>
-<script src="js/bookshop.js"></script>
+
+    <input type="text" placeholder="What book?">
+    <button onclick="getBooks()">Get Book</button>
+
+    <table>
+
+        <tr>
+            <th class="title">Title</th>
+            <th class="price">Price</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td class="title">Lord of the Rings</td>
+            <td class="price">220</td>
+            <td>
+                <button class="read">Read</button>
+                <button class="update">Update</button>
+                <button class="delete">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">Martin Eden</td>
+            <td class="price">150</td>
+            <td>
+                <button class="read">Read</button>
+                <button class="update">Update</button>
+                <button class="delete">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">The Shining</td>
+            <td class="price">75</td>
+            <td>
+                <button class="read">Read</button>
+                <button class="update">Update</button>
+                <button class="delete">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
 </body>
 
 </html>

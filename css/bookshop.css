@@ -5,3 +5,10 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+
+    min-height: calc(100vh - 10vh - 1.5rem);
+}
