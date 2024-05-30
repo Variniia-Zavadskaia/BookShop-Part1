@@ -6,7 +6,7 @@ function onInit() {
 }
 
 function renderBooks() {
-    var books = gBooks
+    var books = getBooks();
     const elBooksList = document.querySelector('.book-list')
     const strHtmls = books.map(book =>
         `<tr>
@@ -15,9 +15,8 @@ function renderBooks() {
             <td class="price">${book.price}</td>
 
             <td class="active">
-                <button class="read">Read</button>
+                <button class="read" onclick="onShowDetails('${book.id}')">Read</button>
                 <button class="update" onclick="onUpdateBook('${book.id}')">Update</button>
-                <button class="details" onclick="onShowDetails('${book.id}')">Details</button>
                 <button class="delete" onclick="onRemoveBook('${book.id}')" class="delete">Delete</button>
             </td>
         </tr>`)

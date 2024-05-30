@@ -79,8 +79,8 @@ tr:nth-child(odd) {
     background-color: yellow;
 }
 
-.details {
-    background-color: cyan;
+.read {
+    background-color: lightskyblue;
 }
 
 .delete {
