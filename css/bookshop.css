@@ -36,18 +36,32 @@ div {
 }
 
 .success-modal {
-    display: grid;
+    display: flex;
     position: fixed;
-    top: 25vh;
-    left: 30vw;
-    height: 3rem;
-    width: 10rem;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
-    background-color: rgb(143, 224, 233);
-    border-radius: 10px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(45, 242, 245, 0.416);
+    padding: 60px 15px;   
 }
+
+.success-modal span{
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    padding: 50px;
+    background: #f9f9f9;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px black;
+}
+
+/* .success-modal button {
+    position: absolute;
+    right: 0;
+    top: 0;
+} */
 
 .modal {
     background-color: lightblue;
@@ -108,4 +122,8 @@ tr:nth-child(odd) {
 
 .add {
     width: 15vw;
+}
+
+.stat-name {
+    margin-left: 10px;
 }

@@ -19,6 +19,18 @@ function getBookById(bookId) {
     return book;
 }
 
+function getExpensiveBookCount() {
+    return gBooks.filter(book => book.price > 200).length;
+}
+
+function getAverageBookCount() {
+    return gBooks.filter(book => book.price <= 200 && book.price > 80).length
+}
+
+function getCheapBookCount() {
+    return gBooks.filter(book => book.price <= 80).length
+}
+
 function removeBook(bookId) {
 
     const idx = gBooks.findIndex(book => book.id === bookId);

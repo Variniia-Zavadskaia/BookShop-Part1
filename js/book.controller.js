@@ -24,13 +24,24 @@ function renderBooks() {
             </td>
         </tr>`)
     elBooksList.innerHTML = strHtmls.join('');
+
+    renderStats();
 }
 
+function renderStats() {
+    const elFooter = document.querySelector('footer')
 
+    const elExpensiveCount = elFooter.querySelector('.expensive')
+    const elAverageCount = elFooter.querySelector('.average')
+    const elCheapCount = elFooter.querySelector('.cheap')
+
+    elExpensiveCount.innerText = getExpensiveBookCount()
+    elAverageCount.innerText = getAverageBookCount()
+    elCheapCount.innerText = getCheapBookCount()
+}
 
 function onSearchBook(ev) {
     ev.preventDefault();
-    console.log("hhhh");
 
     const elInput = document.querySelector('input');
     const title = elInput.value;
@@ -74,7 +85,7 @@ function onAddBook() {
         alert('Invalid value')
         return
     }
-    
+
     console.log(newTitle, newPrice);
 
     addBook(newTitle, newPrice);
