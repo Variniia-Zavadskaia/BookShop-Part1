@@ -4,6 +4,7 @@ var gFilterBy = '';
 
 function onInit() {
     renderBooks();
+    hideSuccessMsg();
 }
 
 function renderBooks() {
@@ -27,7 +28,7 @@ function renderBooks() {
 
 
 
-function onSearchBook(ev){
+function onSearchBook(ev) {
     ev.preventDefault();
     console.log("hhhh");
 
@@ -38,7 +39,7 @@ function onSearchBook(ev){
     renderBooks()
 }
 
-function onClearSearch(ev){
+function onClearSearch(ev) {
     ev.preventDefault();
 
     const elInput = document.querySelector('input');
@@ -53,6 +54,7 @@ function onRemoveBook(bookId) {
     removeBook(bookId);
 
     renderBooks();
+    successMsg('Removed');
 }
 
 function onUpdateBook(bookId) {
@@ -61,24 +63,53 @@ function onUpdateBook(bookId) {
     updatePrice(bookId, newPrice);
 
     renderBooks();
+    successMsg('Price Updated');
 }
 
-function onAddBook(){
+function onAddBook() {
     var newTitle = prompt('New title:');
     var newPrice = +prompt('New price:');
+
+    if (newTitle === '' || newPrice === 0) {
+        alert('Invalid value')
+        return
+    }
+    
+    console.log(newTitle, newPrice);
 
     addBook(newTitle, newPrice);
 
     renderBooks();
+    successMsg('Added');
 }
 
-function onShowDetails(bookId){
+function onShowDetails(bookId) {
     const elModal = document.querySelector('.modal');
     const elData = elModal.querySelector('pre');
-    
+
     const todo = getBookById(bookId);
-    
+
     elData.innerText = JSON.stringify(todo, null, 2);
     elModal.showModal();
 }
 
+function successMsg(actStr) {
+    console.log(actStr);
+    showSuccessMsg(actStr)
+    setTimeout(hideSuccessMsg, 2000);
+}
+
+function showSuccessMsg(actStr) {
+    console.log(actStr);
+    var elModal = document.querySelector('.success-modal');
+    elModal.style.display = 'block';
+    console.log(elModal);
+    var elModalSpan = document.querySelector('span');
+    elModalSpan.innerText = 'Book ' + actStr + ' Successfuly'
+    console.log(elModalSpan.innerText);
+}
+
+function hideSuccessMsg() {
+    var elModal = document.querySelector('.success-modal');
+    elModal.style.display = 'none';
+}

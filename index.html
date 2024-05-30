@@ -15,10 +15,12 @@
     </header>
 
     <main>
-        <form class="search" onsubmit="onSearchBook(event)">
-            <input type="text" placeholder="Search">
-        </form>
-        <button class="clear" onclick="onClearSearch(event)">Clear</button>
+        <div>
+            <form class="search" onsubmit="onSearchBook(event)">
+                <input type="text" placeholder="Search">
+            </form>
+            <button class="clear" onclick="onClearSearch(event)">Clear</button>
+        </div>
 
         <table>
             <thead>
@@ -29,7 +31,12 @@
             <tbody class="book-list"></tbody>
         </table>
 
-        <button onclick="onAddBook()">Add Book</button>
+        <button class="add" onclick="onAddBook()">Add Book</button>
+
+        <div class="success-modal">
+            <span>Action Succeeded</span>
+            <!-- <button onclick="hideSuccessMsg()">x</button> -->
+        </div>
 
         <dialog class="modal">
             <form method="dialog">
