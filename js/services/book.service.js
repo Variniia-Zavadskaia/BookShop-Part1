@@ -1,6 +1,6 @@
 'use strict'
 
-var gBooks
+var gBooks = getBooks()
 
 function getBooks(){
     var books = [

@@ -8,7 +8,7 @@
     <title>Book Shop</title>
 </head>
 
-<body>
+<body onload="onInit()">
     <h1>Book Shop</h1>
 
 
@@ -16,39 +16,12 @@
     <button onclick="getBooks()">Get Book</button>
 
     <table>
-
-        <tr>
-            <th class="title">Title</th>
-            <th class="price">Price</th>
+        <thead>
+            <th>Title</th>
+            <th>Price</th>
             <th>Action</th>
-        </tr>
-        <tr>
-            <td class="title">Lord of the Rings</td>
-            <td class="price">220</td>
-            <td>
-                <button class="read">Read</button>
-                <button class="update">Update</button>
-                <button class="delete">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td class="title">Martin Eden</td>
-            <td class="price">150</td>
-            <td>
-                <button class="read">Read</button>
-                <button class="update">Update</button>
-                <button class="delete">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td class="title">The Shining</td>
-            <td class="price">75</td>
-            <td>
-                <button class="read">Read</button>
-                <button class="update">Update</button>
-                <button class="delete">Delete</button>
-            </td>
-        </tr>
+        </thead>
+        <tbody class="book-list"></tbody>
 
     </table>
 
