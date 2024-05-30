@@ -15,10 +15,11 @@
     </header>
 
     <main>
-        <!-- <form onsubmit="onAddBook()"> -->
-        <!-- <input type="text" placeholder="What book?"> -->
+        <form class="search" onsubmit="onSearchBook(event)">
+            <input type="text" placeholder="Search">
+        </form>
+        <button class="clear" onclick="onClearSearch(event)">Clear</button>
 
-        <!-- </form> -->
         <table>
             <thead>
                 <th class="title">Title</th>

@@ -3,8 +3,15 @@
 var gBooks;
 _createBooks();
 
-function getBooks() {
-    return gBooks;
+function getBooks(filterBy) {
+    if(!filterBy) return gBooks;
+    return gBooks.filter(book => {
+        const titleLower = book.title.toLowerCase()
+        console.log(titleLower);
+        filterBy = filterBy.toLowerCase()
+        console.log(filterBy);
+        return titleLower.includes(filterBy);
+    })
 }
 
 function getBookById(bookId) {
