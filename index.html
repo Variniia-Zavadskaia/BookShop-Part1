@@ -9,30 +9,52 @@
 </head>
 
 <body onload="onInit()">
-    <h1>Book Shop</h1>
+
+    <header>
+        <h1>Book Shop</h1>
+    </header>
 
     <main>
+        <!-- <form onsubmit="onAddBook()"> -->
+        <!-- <input type="text" placeholder="What book?"> -->
 
-        <input type="text" placeholder="What book?">
-        <button onclick="getBooks()">Get Book</button>
-
-
+        <!-- </form> -->
         <table>
-            <thead class="titles">
-                <th>Title</th>
-                <th>Price</th>
-                <th>Action</th>
+            <thead>
+                <th class="title">Title</th>
+                <th class="price">Price</th>
+                <th class="active">Action</th>
             </thead>
             <tbody class="book-list"></tbody>
         </table>
 
         <button onclick="onAddBook()">Add Book</button>
 
-        <script src="js/services/util.service.js"></script>
-        <script src="js/services/book.service.js"></script>
-        <script src="js/book.controller.js"></script>
+        <dialog class="modal">
+            <form method="dialog">
+                <pre></pre>
+                <button>x</button>
+            </form>
+        </dialog>
+
     </main>
-    
+
+
+    <footer>
+        <p>Coffeerights 2024</p>
+        <!-- <p>
+            <span>Total:</span>
+            <span class="total">0</span>
+            <span>Active:</span>
+            <span class="active">0</span>
+            <span>Completed:</span>
+            <span class="completed">0</span>
+        </p> -->
+    </footer>
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
 </body>
 
 </html>

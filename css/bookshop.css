@@ -6,30 +6,83 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+header,
+footer {
+    display: flex;
+    align-items: center;
+    height: 5vh;
+
+    padding-inline: 10px;
+    background-color: lightblue;
+}
+
+header {
+    margin-block-end: .5rem;
+}
+
+footer {
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    min-height: calc(100vh - 10vh - 1.5rem);
+}
+
+.modal {
+    background-color: lightblue;
+}
 
 table {
-    display: grid;
-    padding: 0;
-    list-style: none;
+    border: 1px solid #eee;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.titles{
-    display: grid;
-    gap: 5px;
-    padding: 3px 10px 3px 10px;
-    border-block-end: 1px solid gray;
-    cursor: pointer;
+th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
 }
 
-.book-list {
-    display: grid;
-    gap: 5px;
-    padding: 3px 10px 3px 10px;
-    border-block-end: 1px solid gray;
-    cursor: pointer;
+td {
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    text-align: left;
 }
 
-.book-list:nth-child(odd) {
-    background-color: lightgray;
+tr:nth-child(odd) {
+    background: #fff;
 }
 
+.book-list:nth-child(even) {
+    background: #F7F7F7;
+}
+
+.title {
+    width: 30%;
+}
+
+.price {
+    width: 20%;
+}
+
+.active {
+    width: 50%;
+}
+
+.update {
+    background-color: yellow;
+}
+
+.details {
+    background-color: cyan;
+}
+
+.delete {
+    background-color: orange;
+}

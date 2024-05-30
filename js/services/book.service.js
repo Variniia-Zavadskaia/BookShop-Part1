@@ -28,6 +28,11 @@ function getBooks() {
     return books;
 }
 
+function getBookById(bookId){
+    const book = gBooks.find(book => book.id === bookId);
+    return book;
+}
+
 function removeBook(bookId) {
 
     const idx = gBooks.findIndex(book => book.id === bookId);
@@ -50,3 +55,4 @@ function addBook(newTitle, newPrice){
 
     gBooks.push(newBook);
 }
+

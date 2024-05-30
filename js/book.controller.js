@@ -10,14 +10,15 @@ function renderBooks() {
     const elBooksList = document.querySelector('.book-list')
     const strHtmls = books.map(book =>
         `<tr>
-            <td>${book.title}</td>
+            <td class="title">${book.title}</td>
         
-            <td>${book.price}</td>
+            <td class="price">${book.price}</td>
 
-            <td>
+            <td class="active">
                 <button class="read">Read</button>
-                <button onclick="onUpdateBook('${book.id}')">Update</button>
-                <button onclick="onRemoveBook('${book.id}')" class="delete">Delete</button>
+                <button class="update" onclick="onUpdateBook('${book.id}')">Update</button>
+                <button class="details" onclick="onShowDetails('${book.id}')">Details</button>
+                <button class="delete" onclick="onRemoveBook('${book.id}')" class="delete">Delete</button>
             </td>
         </tr>`)
     elBooksList.innerHTML = strHtmls.join('');
@@ -45,4 +46,14 @@ function onAddBook(){
     addBook(newTitle, newPrice);
 
     renderBooks();
+}
+
+function onShowDetails(bookId){
+    const elModal = document.querySelector('.modal');
+    const elData = elModal.querySelector('pre');
+    
+    const todo = getBookById(bookId);
+    
+    elData.innerText = JSON.stringify(todo, null, 2);
+    elModal.showModal();
 }
