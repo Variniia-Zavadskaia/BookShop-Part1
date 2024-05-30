@@ -11,23 +11,28 @@
 <body onload="onInit()">
     <h1>Book Shop</h1>
 
+    <main>
 
-    <input type="text" placeholder="What book?">
-    <button onclick="getBooks()">Get Book</button>
+        <input type="text" placeholder="What book?">
+        <button onclick="getBooks()">Get Book</button>
 
-    <table>
-        <thead>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Action</th>
-        </thead>
-        <tbody class="book-list"></tbody>
 
-    </table>
+        <table>
+            <thead class="titles">
+                <th>Title</th>
+                <th>Price</th>
+                <th>Action</th>
+            </thead>
+            <tbody class="book-list"></tbody>
+        </table>
 
-    <script src="js/services/util.service.js"></script>
-    <script src="js/services/book.service.js"></script>
-    <script src="js/book.controller.js"></script>
+        <button onclick="onAddBook()">Add Book</button>
+
+        <script src="js/services/util.service.js"></script>
+        <script src="js/services/book.service.js"></script>
+        <script src="js/book.controller.js"></script>
+    </main>
+    
 </body>
 
 </html>

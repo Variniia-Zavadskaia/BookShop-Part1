@@ -1,14 +1,35 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
 
-    min-height: calc(100vh - 10vh - 1.5rem);
+table {
+    display: grid;
+    padding: 0;
+    list-style: none;
 }
+
+.titles{
+    display: grid;
+    gap: 5px;
+    padding: 3px 10px 3px 10px;
+    border-block-end: 1px solid gray;
+    cursor: pointer;
+}
+
+.book-list {
+    display: grid;
+    gap: 5px;
+    padding: 3px 10px 3px 10px;
+    border-block-end: 1px solid gray;
+    cursor: pointer;
+}
+
+.book-list:nth-child(odd) {
+    background-color: lightgray;
+}
+

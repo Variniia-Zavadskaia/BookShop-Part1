@@ -31,15 +31,18 @@ function onRemoveBook(bookId) {
 }
 
 function onUpdateBook(bookId) {
-    
+
     var newPrice = +prompt('New price:');
     updatePrice(bookId, newPrice);
 
     renderBooks();
 }
-// function onToggleBook(bookId){
 
-//     toggleBook()
+function onAddBook(){
+    var newTitle = prompt('New title:');
+    var newPrice = +prompt('New price:');
 
-//     renderBooks()
-// }
+    addBook(newTitle, newPrice);
+
+    renderBooks();
+}
