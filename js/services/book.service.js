@@ -1,8 +1,8 @@
 'use strict'
 
-var gBooks = getBooks()
+var gBooks = getBooks();
 
-function getBooks(){
+function getBooks() {
     var books = [
 
         {
@@ -28,3 +28,14 @@ function getBooks(){
     return books;
 }
 
+function removeBook(bookId) {
+
+    const idx = gBooks.findIndex(book => book.id === bookId);
+    gBooks.splice(idx, 1);
+}
+
+function updatePrice(bookId, newPrice) {
+
+    const idx = gBooks.findIndex(book => book.id === bookId);
+    gBooks[idx].price = newPrice;
+}
