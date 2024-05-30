@@ -122,6 +122,7 @@ tr:nth-child(odd) {
 
 .add {
     width: 15vw;
+    margin-top: 7px;
 }
 
 .stat-name {
