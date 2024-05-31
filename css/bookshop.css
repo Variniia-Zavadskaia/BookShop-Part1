@@ -4,6 +4,11 @@
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 1em;
+    line-height: 1.4;
+    color: #777;
+    height: 100%;
+
 }
 
 header,
@@ -33,35 +38,48 @@ main {
 
 div {
     display: flex;
+    padding: 5px;
+    background-color: rgb(154, 178, 241);
+    margin-block-end: 5px;
+    gap: 5px;
 }
 
 .success-modal {
     display: flex;
     position: fixed;
+    justify-content: center;
     top: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     left: 0;
-    z-index: 1000;
+    z-index: 1;
     background: rgba(45, 242, 245, 0.416);
-    padding: 60px 15px;   
 }
 
-.success-modal span{
+.success-modal span {
+    display: flex;
     position: relative;
-    width: 50%;
-    max-width: 500px;
-    padding: 50px;
+    margin: 100px auto;
+    width: 35%;
+    height: 15%;
+    font-size: 20px;
+    padding: 20px;
+    justify-content: space-between;
     background: #f9f9f9;
     border-radius: 3px;
     box-shadow: 0 5px 15px black;
 }
 
-/* .success-modal button {
+.success-modal button {
     position: absolute;
-    right: 0;
-    top: 0;
-} */
+    border: 2px solid lightgrey;
+    box-shadow: 3px 3px 6px rgb(173 173 173);
+    top: 12%;
+    right: 32%;
+    justify-self: end;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 .modal {
     background-color: lightblue;
@@ -118,11 +136,6 @@ tr:nth-child(odd) {
 
 .delete {
     background-color: orange;
-}
-
-.add {
-    width: 15vw;
-    margin-top: 7px;
 }
 
 .stat-name {
