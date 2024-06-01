@@ -71,10 +71,11 @@ div {
 }
 
 .success-modal button {
+    display: grid;
     position: absolute;
     border: 2px solid lightgrey;
     box-shadow: 3px 3px 6px rgb(173 173 173);
-    top: 12%;
+    top: 6rem;
     right: 32%;
     justify-self: end;
     border-radius: 50%;
