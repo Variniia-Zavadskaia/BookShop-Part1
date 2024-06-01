@@ -55,6 +55,12 @@ function addBook(newTitle, newPrice) {
     _saveBooks();
 }
 
+function successMsg(actStr) {
+    console.log(actStr);
+    onShowSuccessMsg(actStr)
+    setTimeout(onHideSuccessMsg, 2000);
+}
+
 function _createBooks() {
     gBooks = loadFromStorage('books');
 

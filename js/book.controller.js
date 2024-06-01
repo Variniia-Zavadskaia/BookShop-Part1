@@ -4,7 +4,7 @@ var gFilterBy = '';
 
 function onInit() {
     renderBooks();
-    hideSuccessMsg();
+    onHideSuccessMsg();
 }
 
 function renderBooks() {
@@ -104,13 +104,7 @@ function onShowDetails(bookId) {
     elModal.showModal();
 }
 
-function successMsg(actStr) {
-    console.log(actStr);
-    showSuccessMsg(actStr)
-    setTimeout(hideSuccessMsg, 2000);
-}
-
-function showSuccessMsg(actStr) {
+function onShowSuccessMsg(actStr) {
     console.log(actStr);
     var elModal = document.querySelector('.success-modal');
     elModal.style.display = 'block';
@@ -120,7 +114,7 @@ function showSuccessMsg(actStr) {
     console.log(elModalSpan.innerText);
 }
 
-function hideSuccessMsg() {
+function onHideSuccessMsg() {
     var elModal = document.querySelector('.success-modal');
     elModal.style.display = 'none';
 }
